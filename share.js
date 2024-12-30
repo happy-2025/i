@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
       `*Hi!*\n\nI’ve made a *special surprise* to make your *New Year* amazing 🎉\n\nTap this *secure link* to see it:\ncutielife.in/K/?n=${str1}`
     );
     
-    
-  const str2 =str1.trim();
+  const
+  const str2  = str1.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ').trim();
   const whatsappURL = `https://api.whatsapp.com/send?text=*Hi!*%0A%0AI%E2%80%99ve%20made%20a%20*special%20surprise*%20to%20make%20your%20*New%20Year*%20amazing%20%F0%9F%8E%89%0A%0ATap%20this%20*secure%20link*%20to%20see%20it%3A%0A%20happy-2025.github.io%2Fi%2F%3Fn%3D${encodeURIComponent(str2.replace(/ /g, '%20'))}`;
 
   
