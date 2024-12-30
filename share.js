@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Get the user name or signature from the query string
     const str1 = getQueryParameter('str1') || 'Your Friend';
+    
     displaySignature(str1);
     setupWhatsAppShare(str1);
   
@@ -52,8 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
       `*Hi!*\n\nI’ve made a *special surprise* to make your *New Year* amazing 🎉\n\nTap this *secure link* to see it:\ncutielife.in/K/?n=${str1}`
     );
     
-  str1 = str1.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
-  const whatsappURL = `https://api.whatsapp.com/send?text=*Hi!*%0A%0AI%E2%80%99ve%20made%20a%20*special%20surprise*%20to%20make%20your%20*New%20Year*%20amazing%20%F0%9F%8E%89%0A%0ATap%20this%20*secure%20link*%20to%20see%20it%3A%0A%20happy-2025.github.io%2Fi%2F%3Fn%3D${encodeURIComponent(str2.replace(/ /g, '%20'))}`;
+  
+    
+    str1 = str1.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+     // Output: 'Benadin Benny'
+    
+  const whatsappURL = `https://api.whatsapp.com/send?text=*Hi!*%0A%0AI%E2%80%99ve%20made%20a%20*special%20surprise*%20to%20make%20your%20*New%20Year*%20amazing%20%F0%9F%8E%89%0A%0ATap%20this%20*secure%20link*%20to%20see%20it%3A%0A%20happy-2025.github.io%2Fi%2F%3Fn%3D${encodeURIComponent(str1.replace(/ /g, '%20'))}`;
 
   
     // Add click event listener to the share button
