@@ -382,6 +382,7 @@ function displayRandomImage() {
 
 function displaySignature(name) {
   const signatureEl = document.getElementById('signature');
+  name = name.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
   signatureEl.textContent = `— ${name}`;
 }
 
