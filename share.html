@@ -18,21 +18,32 @@
     }
     
     #whatsapp-share-btn {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      background-color: #25D366; /* WhatsApp Green */
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+      display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #25D366, #128C7E); /* WhatsApp green gradient */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background 0.3s ease, transform 0.2s ease;
     }
     
     #whatsapp-share-btn:hover {
-      background-color: #1DA851; /* Darker Green on Hover */
-      transform: scale(1.05);
+     background: linear-gradient(90deg, #128C7E, #25D366); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slight zoom effect */
     }
+
+    .whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* Space between icon and text */
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3)); /* Subtle shadow for icon */
+}
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -375,27 +386,6 @@ background: linear-gradient(to right, #ff7e5f, #feb47b); /* Orange gradient */
 }
 
 
-
-
-
-
-
-
-/* Footer Section */
- .footer {
-      
-      text-align: center;
-      
-      padding: 15px;
-      
-      font-size: 0.6rem;
-  color: #dcdcdc;
-
-    }
-    .footer p {
-      margin: 0;
-    }
-
  
 
     /* --- HEADER, MAIN INTERACTION, AND FOOTER CONTAINER --- */
@@ -416,7 +406,53 @@ background: linear-gradient(to right, #ff7e5f, #feb47b); /* Orange gradient */
     }
 
     
+/* Footer Section */
+.footer {
+  padding: 20px;
+  font-size: 14px;
+  color: #aaaaaa;
+}
 
+.footer p {
+  margin: 5px 0;
+}
+
+.linkedin-link {
+  text-decoration: none;
+  color: #0077b5; /* LinkedIn blue */
+  font-weight: bold;
+}
+
+.linkedin-link:hover {
+  text-decoration: underline;
+  color: #005983; /* Darker blue for hover effect */
+}
+
+
+.footer {
+  margin-top: 10px;
+  padding: 0  ;
+  text-align: center;
+  font-size: 10px;
+  color: #aaaaaa;
+  
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.linkedin-link {
+  text-decoration: none;
+  color: #0077b5; /* LinkedIn blue */
+  font-weight: bold;
+}
+
+.linkedin-link:hover {
+  text-decoration: underline;
+  color: #005983; /* Darker blue for hover effect */
+}
   
 
   
@@ -447,6 +483,15 @@ background: linear-gradient(to right, #ff7e5f, #feb47b); /* Orange gradient */
     <div id="signature"></div>
   </div>
 
+
+  <button id="whatsapp-share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon"> Share on WhatsApp</button>
+
+  
+  <footer class="footer">
+      <p>Designed by <a href="https://www.linkedin.com/in/bendi-b52ba221a/" target="_blank" class="linkedin-link">Benny</a> </p>
+    </footer>
+  
+
   <!-- User input section (Name input + button + share link) -->
   
 
@@ -459,7 +504,7 @@ background: linear-gradient(to right, #ff7e5f, #feb47b); /* Orange gradient */
   <script src="share.js"></script>
   
 
-  <button id="whatsapp-share-btn">Share on WhatsApp</button>
+  
 
     
 
